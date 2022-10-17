@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background-color: #222831;
+}
+
+.content-1 {
+  width: 70%;
+  min-height: 100vh;
+  /* background-color: antiquewhite; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 1.1rem 5rem;
+  background: #222831;
+}
+
+.brand a {
+  text-decoration: none;
+  font-size: 40px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+ul {
+  display: flex;
+  /* flex-direction: row; */
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+li {
+  list-style-type: none;
+  margin-left: 3rem;
+}
+
+li > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+li::after {
+  content: "";
+  width: 0rem;
+  height: 0.15rem;
+  background-color: #fff;
+  display: block;
+  border-radius: 0.2rem;
+  margin: 0.2rem auto 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+li:hover::after {
+  width: 2rem;
+}
+
+.send {
+  border: 1px solid white;
+  padding: 3px 15px 3px 15px;
+  border-radius: 10px;
+}
+
+.content-aja {
+  width: 50%;
+  margin-top: 13%;
+  margin-left: 80px;
+}
+
+.content-apaaja {
+  font-size: 5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.content-antar {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin-top: 20px;
+}
+
+.content-send {
+  font-size: 1.5rem;
+  width: 100px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: white;
+  border: 0px solid #f05454;
+  border-radius: 8%;
+  padding: 1px 10px 1px 5px;
+  background: #f05454;
+  margin-top: 40px;
+  line-height: 30px;
+}
+
+.content-2 {
+  width: 30%;
+  min-height: 100vh;
+}
+
+/* 
+=====================SLIDER CSS====================
+/* */
+
+.slider {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /* -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap; */
+  flex-flow: row nowrap;
+  /* -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end; */
+  align-items: flex-end;
+  /* -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center; */
+  justify-content: center;
+}
+.slider__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 12px;
+  border-radius: 50%;
+  z-index: 10;
+  outline: 6px solid #ccc;
+  outline-offset: -6px;
+  cursor: pointer;
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+  appearance: none;
+  /* -webkit-backface-visibility: hidden; */
+  /* backface-visibility: hidden; */
+}
+.slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+  animation: check 0.4s linear forwards;
+}
+.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+}
+.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -115%;
+}
+.slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+  left: -220%;
+}
+.slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+  left: -330%;
+}
+.slider__nav:checked:nth-of-type(5) ~ .slider__inner {
+  left: -440%;
+}
+.slider__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  /* -webkit-transition: left 0.4s; */
+  transition: left 0, 4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /* -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap; */
+  flex-flow: row nowrap;
+}
+/*  */
+
+@keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+img {
+  width: 505px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.garis {
+  position: absolute;
+  width: 5px;
+  min-height: 100vh;
+  background-color: white;
+  margin-left: 2%;
+}
+
+.bayang {
+  position: absolute;
+  z-index: 1;
+  /* background: transparent; */
+  width: 30%;
+  height: auto;
+  overflow: hidden;
+}
+
+.content-2-judul {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  z-index: 1;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin-top: 40%;
+  margin-left: 5%;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-1">
+        <!-- ==============HEADER================-->
+        <div class="garis"></div>
+        <header>
+          <div class="brand"><a href="#">apaaja.</a></div>
+          <nav>
+            <ul>
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a class="send">Send</a></li>
+            </ul>
+          </nav>
+          <div></div>
+        </header>
+        <!--=============CONTENT===============-->
+        <div class="content-aja">
+          <div class="content-apaaja">apaaja.</div>
+          <div class="content-antar">
+            Kalau bisa antar sendiri, kenapa harus orang lain yang antar? anda
+            malas ya? jangan males-males jadi orang.
+          </div>
+          <div class="content-send">send</div>
+        </div>
+      </div>
+      <div class="content-2">
+        <!-- ==============SLIDE BUTTON================-->
+        <!-- <img class="shadow" src="./img/bayang.png" alt="" /> -->
+        <div class="bayang"><img src="./img/bayang.png" alt="" /></div>
+        <div class="content-2-judul"><h1>FAST AND FURIOUS</h1></div>
+        <div class="slider">
+          <input
+            type="radio"
+            name="slider"
+            title="slide1"
+            checked="checked"
+            class="slider__nav"
+          />
+          <input
+            type="radio"
+            name="slider"
+            title="slide2"
+            class="slider__nav"
+          />
+          <input
+            type="radio"
+            name="slider"
+            title="slide3"
+            class="slider__nav"
+          />
+          <input
+            type="radio"
+            name="slider"
+            title="slide4"
+            class="slider__nav"
+          />
+          <input
+            type="radio"
+            name="slider"
+            title="slide5"
+            class="slider__nav"
+          />
+          <!-- ==============SLIDER CONTENT================-->
+          <div class="slider__inner">
+            <div class="slider__contents">
+              <img src="./img/image-1.png" alt="" />
+            </div>
+            <div class="slider__contents">
+              <img src="./img/image-2.jpg" alt="" />
+            </div>
+            <div class="slider__contents">
+              <img src="./img/image-3.jfif" alt="" />
+            </div>
+            <div class="slider__contents">
+              <img src="./img/image-4.jpg" alt="" />
+            </div>
+            <div class="slider__contents">
+              <img src="./img/image-5.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let img = document.querySelectorAll(".slider__nav")
+      let i = 0
+      setInterval(() => {
+        i === 4 ? ((i = 0), (i += 1)) : i++
+        img[i].checked = true
+        img[i - 1].checked = false
+        i++
+      }, 5000)
+    </script>
+  </body>
+</html>
